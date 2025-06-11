@@ -1,0 +1,24 @@
+
+services:
+  web:
+    build: .
+    ports:
+      - "8069:8069"
+    # depends_on:
+    #   - db
+    restart: always
+    # environment:
+    #   - DB_HOST=db
+    #   - DB_USER=odoo
+    #   - DB_PASSWORD=odoo
+    #   - DB_NAME=odoo
+    #   - DB_PORT=5432
+    command: python odoo-bin -c odoo.conf
+  # db:
+  #   image: postgres:15
+  #   ports:
+  #     - "5432:5432"
+  #   environment:
+  #     - POSTGRES_USER=odoo
+  #     - POSTGRES_PASSWORD=odoo
+  #     - POSTGRES_DB=odoo

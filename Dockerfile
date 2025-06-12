@@ -20,6 +20,7 @@ RUN apt-get install -y build-essential python3-dev \
 RUN pip install --upgrade pip
 
 COPY requirements.txt .
+COPY odoo.conf .
 RUN pip install -r requirements.txt
 
 RUN apt-get install -y wget

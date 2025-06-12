@@ -6,6 +6,9 @@ services:
       - "8069:8069"
     # depends_on:
     #   - db
+    volumes:
+      - ./config:/etc/odoo
+      - ./extra-addons:/mnt/extra-addons
     restart: always
     # environment:
     #   - DB_HOST=db
@@ -13,7 +16,7 @@ services:
     #   - DB_PASSWORD=odoo
     #   - DB_NAME=odoo
     #   - DB_PORT=5432
-    command: python odoo-bin -c odoo.conf
+    command: python odoo-bin -c odoo.conf -i base
   # db:
   #   image: postgres:15
   #   ports:

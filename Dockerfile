@@ -39,4 +39,4 @@ RUN chown -R odoo:odoo /app
 
 USER odoo
 
-# CMD ["python","odoo-bin","-c","odoo.conf"]
+CMD ["python","odoo-bin","-c","odoo.conf"]

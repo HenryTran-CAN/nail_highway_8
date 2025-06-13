@@ -16,7 +16,7 @@ services:
     #   - DB_PASSWORD=odoo
     #   - DB_NAME=odoo
     #   - DB_PORT=5432
-    command: python odoo-bin -c odoo.conf -i base
+    command: python odoo-bin -c odoo.conf
   # db:
   #   image: postgres:15
   #   ports:
